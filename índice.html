@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Día de la Novia, Yessi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      margin: 0; padding: 0; box-sizing: border-box;
+      width: 100vw; height: 100vh; overflow: hidden;
+      background: #111;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    #lluviaCorazones {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none;
+      z-index: 2;
+    }
+    .caja-regalo {
+      width: 350px; height: 350px;
+      background: linear-gradient(135deg, #fff 70%, #f48fb1 100%);
+      border-radius: 24px; margin: 100px auto 0; position: relative;
+      box-shadow: 0 0 40px 10px #f06292cc;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column;
+      z-index: 3;
+      animation: aparecer 2s;
+    }
+    @keyframes aparecer {
+      0% { opacity: 0; transform: scale(0.7) }
+      100% { opacity: 1; transform: scale(1) }
+    }
+    .lazo {
+      width: 200px; height: 40px; background: #e91e63;
+      position: absolute; top: 60px; left: 75px; border-radius: 20px 20px 0 0;
+      z-index: 4;
+      box-shadow: 0 6px 18px #e91e6399;
+    }
+    .lazo:after, .lazo:before {
+      content: ''; display: block; position: absolute;
+      background: #e91e63;
+    }
+    .lazo:after {
+      width: 40px; height: 80px; left: -20px; top: -20px; border-radius: 80px 80px 0 0;
+      transform: rotate(-30deg);
+    }
+    .lazo:before {
+      width: 40px; height: 80px; right: -20px; top: -20px; border-radius: 80px 80px 0 0;
+      transform: rotate(30deg);
+    }
+    .boton-abrir {
+      margin-top: 180px; font-size: 1.4em;
+      background: #e91e63; color: #fff; border: none; border-radius: 12px;
+      padding: 16px 36px; cursor: pointer; box-shadow: 0 4px 20px #e91e6333;
+      transition: background 0.2s;
+      z-index: 5;
+      font-weight: bold;
+    }
+    .boton-abrir:hover { background: #ad1457; }
+    /* Carro animado */
+    #carro-regalo {
+      position: absolute; top: 42%; left: -380px; width: 300px; height: 150px; z-index: 5;
+      opacity: 0; transition: opacity 1s;
+    }
+    .carro-img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      animation:
